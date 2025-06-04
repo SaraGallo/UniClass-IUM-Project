@@ -1,30 +1,13 @@
-# Develop fully functional websit
+# UniClass
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+UniClass è una piattaforma modulare per la gestione dell'ambiente accademico universitario, progettata per fornire servizi come la visione degli orari delle lezioni, la gestione delle aule, e la gestione degli utenti. Il sistema è progettato per essere facilmente estendibile e personalizzabile, offrendo una gestione centralizzata e una facile integrazione con altri strumenti accademici.
+Il progetto prospetta a migliorare l'esperienza universitaria rendendo i sistemi, già presenti in ateneo, unificati ed accessibili ad una vasta gamma di utenti.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/sgallo52-unisaits-projects/v0-develop-fully-functional-websit)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/HDEciqppEPN)
+## Funzionalità principali
 
-## Overview
+- **Visione degli orari delle lezioni**: Gli studenti possono visualizzare gli orari delle lezioni aggiornati in tempo reale.
+- **Gestione delle aule**: Permette di visualizzare la disponibilità delle aule, facilitando la pianificazione delle lezioni e degli eventi.
+- **Sistema modulare**: La piattaforma è progettata con un'architettura modulare che consente di aggiungere nuove funzionalità in modo facile e rapido.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
-
-## Deployment
-
-Your project is live at:
-
-**[https://vercel.com/sgallo52-unisaits-projects/v0-develop-fully-functional-websit](https://vercel.com/sgallo52-unisaits-projects/v0-develop-fully-functional-websit)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/HDEciqppEPN](https://v0.dev/chat/projects/HDEciqppEPN)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Progetto a scopo didattico.
+Sviluppato da Sara Gallo, Daniel Cusati, Gerardo Antonio Cetrulo e LucaGeneroso Cammarota.
