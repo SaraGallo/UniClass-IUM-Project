@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-import { Eye, EyeOff, User, Lock } from "lucide-react"
+import { Eye, EyeOff, User, Lock, GraduationCap } from "lucide-react"
 
 export default function LoginPage() {
   const [email, setEmail] = useState("")
@@ -17,6 +17,7 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+  const [logoError, setLogoError] = useState(false)
   const router = useRouter()
 
   // Check if user is already logged in
@@ -56,21 +57,34 @@ export default function LoginPage() {
     setIsLoading(false)
   }
 
+  const handleLogoError = () => {
+    console.log("Logo non trovato, utilizzo fallback")
+    setLogoError(true)
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="relative w-72 h-36 mx-auto mb-4 flex items-center justify-center bg-white rounded-lg shadow-sm p-6">
-            <img
-              src="/images/uniclass-logo.png"
-              alt="UniClass - Università degli Studi di Salerno"
-              className="max-w-full max-h-full object-contain"
-              style={{ width: "auto", height: "auto", maxWidth: "280px", maxHeight: "120px" }}
-              onError={(e) => {
-                console.log("Errore caricamento logo:", e)
-                e.currentTarget.style.display = "none"
-              }}
-            />
+            {!logoError ? (
+              <img
+                src="/images/uniclass-logo.png"
+                alt="UniClass - Università degli Studi di Salerno"
+                className="max-w-full max-h-full object-contain"
+                style={{ width: "auto", height: "auto", maxWidth: "280px", maxHeight: "120px" }}
+                onError={handleLogoError}
+                onLoad={() => console.log("Logo caricato con successo")}
+              />
+            ) : (
+              <div className="flex flex-col items-center justify-center text-blue-600">
+                <GraduationCap className="w-16 h-16 mb-2" />
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-800">UniClass</div>
+                  <div className="text-sm text-blue-600">Università degli Studi di Salerno</div>
+                </div>
+              </div>
+            )}
           </div>
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Benvenuto in UniClass</h1>
           <p className="text-gray-600">Accedi al tuo account per continuare</p>
